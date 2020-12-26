@@ -18,5 +18,9 @@ namespace InzService
         public string Temperature { get; set; }
         public string Address { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
+
+        
     }
+
+    
 }

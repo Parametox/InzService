@@ -21,5 +21,18 @@ namespace InzService
             };
             ServiceBase.Run(ServicesToRun);
         }
+
+        // todo: connection string 
+        //private static string GetConnectionString()
+        //{
+        //    return "metadata=res://*/InzDbModel.csdl|res://*/InzDbModel.ssdl|res://*/InzDbModel.msl;" +
+        //        "provider=System.Data.SqlClient;" +
+        //        "provider connection string=\"data source=DESKTOP-2DH49DG;" +
+        //        "initial catalog=InzDatabase;" +
+        //        "user id=pci;" +
+        //        "password=pass#pass;" +
+        //        "MultipleActiveResultSets=True; " +
+        //        "App=EntityFramework\"";
+        //}
     }
 }

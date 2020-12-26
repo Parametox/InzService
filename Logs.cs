@@ -12,10 +12,15 @@ namespace InzService
     using System;
     using System.Collections.Generic;
     
-    public partial class LogTable
+    public partial class Logs
     {
-        public long Id { get; set; }
+        public long LogId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+        public string Date { get; set; }
+        public long RefTempId { get; set; }
+    
+        public virtual Logs Logs1 { get; set; }
+        public virtual Logs Log1 { get; set; }
     }
 }

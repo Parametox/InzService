@@ -5,10 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="8a9d139bc58c4f4ebb83e09e1e42d87b" Name="Diagram1">
-        <EntityTypeShape EntityType="InzDatabaseModel.LogTable" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="InzDatabaseModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="InzDatabaseModel.TemperatureTable" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="InzDatabaseModel.UserTable" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InzDatabaseModel.Logs" Width="1.5" PointX="5.375" PointY="0.75" />
+        <AssociationConnector Association="InzDatabaseModel.FK_Logs_Logs" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
