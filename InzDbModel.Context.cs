@@ -21,6 +21,7 @@ namespace InzService
             : base(nameOrConnectionString: GetConnectionString())
         {
         }
+
         private static string GetConnectionString()
         {
             return "metadata=res://*/InzDbModel.csdl|res://*/InzDbModel.ssdl|res://*/InzDbModel.msl;" +
@@ -32,6 +33,7 @@ namespace InzService
                 "MultipleActiveResultSets=True; " +
                 "App=EntityFramework\"";
         }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -41,6 +43,7 @@ namespace InzService
         public virtual DbSet<TemperatureTable> TemperatureTables { get; set; }
         public virtual DbSet<UserTable> UserTables { get; set; }
         public virtual DbSet<Logs> Logs1 { get; set; }
+        public virtual DbSet<DeviceTable> DeviceTables { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

@@ -25,6 +25,7 @@ namespace InzService
 
         private string temperature;
         private string address;
+        private string fanStatus;
         SessionState ss1, ss2;
         IMqttClient client, client2;
         DateTime StartDate = DateTime.Now;
@@ -159,6 +160,7 @@ namespace InzService
             ArrayList parameters = new ArrayList();
             parameters.Add(address);
             parameters.Add(temperature);
+            parameters.Add(fanStatus);
 
             if (!String.IsNullOrEmpty(callback))
             {
@@ -181,9 +183,9 @@ namespace InzService
                         tt.Temperature = (string)parameters[1];
                         tt.Address = (string)parameters[0];
                         tt.Date = DateTime.Now;
+                        tt.FanStatus = byte.Parse(parameters[2].ToString());
                         db.TemperatureTables.Add(tt);
                         db.SaveChanges();
-
                         Stopwatch.Stop();
                         var ms = Stopwatch.ElapsedMilliseconds;
                         Logs logs = new Logs();

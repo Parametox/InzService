@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="InzDatabaseModel.UserTable" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="InzDatabaseModel.Logs" Width="1.5" PointX="5.375" PointY="0.75" />
         <AssociationConnector Association="InzDatabaseModel.FK_Logs_Logs" />
+        <EntityTypeShape EntityType="InzDatabaseModel.DeviceTable" Width="1.5" PointX="5.125" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
