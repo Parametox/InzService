@@ -16,7 +16,7 @@ namespace InzService
         {
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
-            { 
+            {
                 new InzService()
             };
             ServiceBase.Run(ServicesToRun);

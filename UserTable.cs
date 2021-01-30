@@ -13,7 +13,7 @@ namespace InzService
     using System.Collections.Generic;
     
     public partial class UserTable
-    { 
+    {
         public long RecId { get; set; }
         public string UserId { get; set; }
         public string Password { get; set; }
