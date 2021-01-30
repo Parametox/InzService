@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
@@ -34,3 +35,41 @@ Global
 		SolutionGuid = {104DB60D-C25B-4B5E-9AA2-AEC4F7D89DA0}
 	EndGlobalSection
 EndGlobal
+=======
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InzService", "InzService.csproj", "{9DE3962A-FFE6-47E2-BC06-9A1F9438B98A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestServiceApp", "..\TestServiceApp\TestServiceApp.csproj", "{242F7322-9E6B-4FCA-8F14-AE41AC5E8FEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{AAB7F5DC-DF19-4ABA-8337-711C4648D4D3}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\selectTeampTable.sql = SQL\selectTeampTable.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DE3962A-FFE6-47E2-BC06-9A1F9438B98A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DE3962A-FFE6-47E2-BC06-9A1F9438B98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DE3962A-FFE6-47E2-BC06-9A1F9438B98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DE3962A-FFE6-47E2-BC06-9A1F9438B98A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{242F7322-9E6B-4FCA-8F14-AE41AC5E8FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{242F7322-9E6B-4FCA-8F14-AE41AC5E8FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{242F7322-9E6B-4FCA-8F14-AE41AC5E8FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{242F7322-9E6B-4FCA-8F14-AE41AC5E8FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {104DB60D-C25B-4B5E-9AA2-AEC4F7D89DA0}
+	EndGlobalSection
+EndGlobal
+>>>>>>> 7634a5a11bd73e313484bf67d9f5b1588400d1aa
