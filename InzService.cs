@@ -17,6 +17,8 @@ namespace InzService
 {
     public partial class InzService : ServiceBase
     {
+        // => deklaracje i inicjalizacje
+        Stopwatch Stopwatch;
         private EventLog eventLog1;
         private int eventId = 1;
 
@@ -30,7 +32,7 @@ namespace InzService
         SessionState ss1, ss2;
         IMqttClient client, client2;
         DateTime StartDate = DateTime.Now;
-
+        // <=
 
         public enum ServiceState
         {
@@ -58,8 +60,9 @@ namespace InzService
         [DllImport("advapi32.dll", SetLastError = true)]
         private static extern bool SetServiceStatus(System.IntPtr handle, ref ServiceStatus serviceStatus);
 
-        Stopwatch Stopwatch;
-
+        /// <summary>
+        /// Konstruktor
+        /// </summary>
         public InzService()
         {
             InitializeComponent();
@@ -127,7 +130,7 @@ namespace InzService
         }
 
         /// <summary>
-        /// Metoda obsługująca wiadomość z brokera
+        /// Obsługa wiadomości z brokera MQTT
         /// </summary>
         /// <param name="topic">Subskrybowant Topic</param>
         /// <param name="payload">Wiadomość</param>
@@ -200,6 +203,9 @@ namespace InzService
             }
         }
 
+        /// <summary>
+        /// Metoda wykonująca się przy uruchamianiu usługi
+        /// </summary>
         protected override void OnStart(string[] args)
         {
 
@@ -224,6 +230,9 @@ namespace InzService
             thd.Start();
         }
 
+        /// <summary>
+        /// Usuwanie rekordów starsze niż 7 dni od aktualnej daty
+        /// </summary>
         private void DeleteOldRecords()
         {
             using (InzDataBase db = new InzDataBase())
@@ -258,11 +267,17 @@ namespace InzService
            
         }
 
+        /// <summary>
+        /// Metoda wykonująca się przy zatrzymaniu usługi
+        /// </summary>
         protected override void OnStop()
         {
             eventLog1.WriteEntry("In OnStop.");
         }
 
+        /// <summary>
+        /// Wywołana co jedną minutę, jej wpis do rejetru EventView informuje o poprawnym działniu metody
+        /// </summary>
         public void OnTimer(object sender, ElapsedEventArgs args)
         {
             eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId++);
@@ -274,6 +289,11 @@ namespace InzService
             }
         }
 
+        /// <summary>
+        /// Tworzy wpis do tabeli z logami
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="desc"></param>
         public static void CreateLog(string title, string desc)
         {
             using (InzDataBase db = new InzDataBase())
