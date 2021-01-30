@@ -14,7 +14,7 @@ namespace InzService
     
     public partial class Logs
     {
-        public long LogId { get; set; }
+        public long LogId { get; set; } 
         public string Title { get; set; }
         public string Description { get; set; }
         public string Date { get; set; }

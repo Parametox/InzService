@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Threading;
+using System.Collections;
 using System.Data;
 using System.Diagnostics;
 using System.Linq;
-using System.ServiceProcess;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Timers;
 using System.Net.Mqtt;
-using System.Collections;
+using System.Runtime.InteropServices;
+using System.ServiceProcess;
+using System.Text;
+using System.Timers;
 
 namespace InzService
 {

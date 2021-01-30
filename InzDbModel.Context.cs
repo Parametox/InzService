@@ -18,22 +18,10 @@ namespace InzService
     public partial class InzDataBase : DbContext
     {
         public InzDataBase()
-            : base(nameOrConnectionString: GetConnectionString())
+            : base("name=InzDataBase")
         {
         }
-
-        private static string GetConnectionString()
-        {
-            return "metadata=res://*/InzDbModel.csdl|res://*/InzDbModel.ssdl|res://*/InzDbModel.msl;" +
-                "provider=System.Data.SqlClient;" +
-                "provider connection string=\"data source=DESKTOP-2DH49DG;" +
-                "initial catalog=InzDatabase;" +
-                "user id=pci;" +
-                "password=pass#pass;" +
-                "MultipleActiveResultSets=True; " +
-                "App=EntityFramework\"";
-        }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

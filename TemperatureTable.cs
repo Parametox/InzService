@@ -13,7 +13,7 @@ namespace InzService
     using System.Collections.Generic;
     
     public partial class TemperatureTable
-    {
+    { 
         public long Id { get; set; }
         public string Temperature { get; set; }
         public string Address { get; set; }

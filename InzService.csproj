@@ -87,11 +87,6 @@
     <Compile Include="DeviceTable.cs">
       <DependentUpon>InzDbModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="InzDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>InzDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="InzDbModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -160,11 +155,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="InzDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>InzDB.cs</LastGenOutput>
-      <DependentUpon>InzDbModel.edmx</DependentUpon>
-    </Content>
     <Content Include="InzDbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>InzDbModel.Context.cs</LastGenOutput>

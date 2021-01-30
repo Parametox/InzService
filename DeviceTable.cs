@@ -14,7 +14,7 @@ namespace InzService
     
     public partial class DeviceTable
     {
-        public long RecId { get; set; }
+        public long RecId { get; set; } 
         public string DeviceId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
